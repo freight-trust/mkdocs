@@ -1,9 +1,0 @@
-_adoc/
-site/
-*.zip
-*.html
-*.xml
-public/
-node_modules/
-yarn.lock
-
