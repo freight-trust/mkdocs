@@ -1,7 +1,7 @@
 site_name: Freight Trust Network Omnibus
 repo_url: 'https://github.com/freight-trust/omnibus'
 copyright: |
-  Copyright &copy; 2020 <a href="https://frieghttrust.com"  target="_blank" rel="noopener">FreightTrust & Clearing Corporation</a> CC-ND-NC-2.5
+  Copyright &copy; 2020 <a href="https://freighttrust"  target="_blank" rel="noopener">FreightTrust & Clearing Corporation - All Rights Reserved</a>
 
 google_analytics:
   - ''
@@ -20,6 +20,21 @@ nav:
     - Network Participants: rulebook/network-clearing-participants.md
     - Obligations: rulebook/obligations.md
     - Suspension: rulebook/suspension.md
+  - Blockchain:
+    - Blockchain: blockchain/pricing.md
+    - VBSM: blockchain/vbsm.md.md
+    - Network Upgrades: blockchain/network-upgrade.md
+    - Smart Contract Practices: blockchain/smart-contract-practices.md
+    - Topology: blockchain/topology.md
+    - Network: blockchain/network.md
+    - Smart Contract Development: blockchain/smart-contract-dev.md
+    - Contracts v1: blockchain/contracts-v1.md
+    - EVM: blockchain/evm.md
+    - Token Overview: blockchain/token-overview.md
+    - List: blockchain/list.md.md
+    - Wallets: blockchain/wallets.md
+    - Staking: blockchain/staking.md
+    - Intro to EDI: blockchain/intro-edi.md    
 docs_dir: docs
 theme:
   name: material
@@ -91,9 +106,13 @@ markdown_extensions:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/facelessuser
-    - icon: fontawesome/brands/discord
-      link: https://discord.gg/fqQ7ypS
+      link: https://github.com/freight-trust
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/freightclear
+    - icon: fontawesome/brands/gitlab
+      link: https://gitlab.com/fr8
+    - icon: fontawesome/brands/intercom
+      link: https://intercom.help/freight/en
 
 plugins:
   - search
