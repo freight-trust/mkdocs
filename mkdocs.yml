@@ -3,9 +3,19 @@ repo_url: 'https://github.com/freight-trust/omnibus'
 copyright: |
   Copyright &copy; 2020 <a href="https://freighttrust"  target="_blank" rel="noopener">FreightTrust & Clearing Corporation - All Rights Reserved</a>
 
-google_analytics:
+extra:
+  latest_version_warning:
+    url_contains: /latest/
+    text: 'You are reading the latest documentation for the Freight Trust Network'
+  support:
+    chat: https://join.slack.com/share/zt-flnfv57l-uzh1Q46nWIeTHM7rMxzE~w
+    email: support@freight.zendesk.com
+    website: https://www.freighttrust.com
+    issues: https://github.com/freight-chain/network#issues
+  google_analytics:
   - ''
   - ''
+
 nav:
   - Home: index.md
   - Concepts: concepts/README.md
@@ -40,6 +50,12 @@ theme:
   name: material
   features:
     - tabs
+  palette:
+    primary: blue
+    accent: pink
+  font:
+    text: 'Roboto Slab'
+    code: 'Roboto Mono'
 extra_css: ["extra.css"]
 
 
