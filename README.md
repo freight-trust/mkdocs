@@ -17,9 +17,7 @@
 
 > Freight Trust & Clearing Omnibus
 
-### 🏠 [Homepage](https://github.com/freight-trust/omnibus#readme)
-
-### ✨ [Demo](https://freight.page.link/demo)
+## ✨ Documentation Omnibus 
 
 ## Install
 
@@ -45,12 +43,9 @@ yarn run test
 
 * Website: www.freighttrust.com
 * Twitter: [@freighttrustnet](https://twitter.com/freighttrustnet)
-* Github: [@sambacha](https://github.com/sambacha)
+* Github: [@freight-trust](https://github.com/freight-trust)
+* Gitlab: [@fr8](https://gitlab.com/fr8)
 * LinkedIn: [@freightcorp](https://linkedin.com/in/freightcorp)
-
-## 🤝 Contributing
-
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/freight-trust/omnibus/issues). You can also take a look at the [contributing guide](https://github.com/freight-trust/omnibus/blob/master/CONTRIBUTING.md).
 
 ## Show your support
 
@@ -60,6 +55,3 @@ Give a ⭐️ if this project helped you!
 
 Copyright © 2020 [FreightTrust & Clearing Corporation](https://github.com/sambacha).<br />
 This project is [CC--ND--NC--2.5](https://github.com/freight-trust/legal) licensed.
-
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
