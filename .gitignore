@@ -1,0 +1,7 @@
+_adoc/
+*.zip
+*.html
+*.xml
+node_modules/
+yarn.lock
+
