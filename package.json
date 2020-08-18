@@ -4,9 +4,12 @@
   "description": "Freight Trust & Clearing Omnibus",
   "main": "index.js",
   "directories": {
-    "doc": "docs"
+    "doc": "docs",
+    "site": "site"
   },
   "scripts": {
+    "deploy": "netlify build",
+    "prod": "netlify deploy --prod",
     "test:links:check": "find . -name \\*.md ! -path \"./node_modules/*\" -exec ./node_modules/markdown-link-check/markdown-link-check -q -c CI/linkchecker/link_check_conf.json {} \\; > linkchecker.out 2>&1",
     "test:links:display": "cat linkchecker.out",
     "test:links:verify": "! grep 'ERROR:' linkchecker.out",

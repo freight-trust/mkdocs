@@ -1,0 +1,14 @@
+<html><head><title>ASC X12 004010 Element 629</title><meta name="Microsoft Theme" content="cubism_teal 011, default">
+<meta name="Microsoft Border" content="none">
+</head><body background="../_themes/cubism_teal/background.gif" bgcolor="#FFFFFF" text="#000000" link="#105E8B" vlink="#3E3E3E" alink="#DD7400"><!--mstheme--><font face="arial, Arial, Helvetica"><center><big><big>ASC X12 004010</big></big></center><p><b><big><big><big><big><big>629</big> Alternation Precedence Code</big></big></big></big></b><br><small>TYPE=</small><big><big><big>ID  </big></big></big><small>MIN=</small><big><big><big>1  </big></big></big><small>MAX=</small><big><big><big>1</big></big></big>			<p>Code identifying the priority of rate application when two or more rates apply to a given movement; if rate application includes two or more rates of the same value for this element, individual carrier rules and procedures shall govern <p><br>
+<tt><!--mstheme--></font><pre WIDTH="80"><b>A        </b>Indicates Alternation between all Lower Levels
+<b>B        </b>Price Application Hierarchy Rules Apply - Do Not Alternate between Levels
+<b>L        </b>A rate with this element indicating an &quot;L&quot; value will be applied only in the 
+         absence of rate application by any with this element indicating &quot;N&quot; or &quot;S&quot;
+<b>N        </b>A rate with this element indicating an &quot;N&quot; value will be applied to the 
+         exclusion of all other rates with this data element indicating other values
+<b>P        </b>Only Applicable for Contracts - Indicates that Alternation between Levels 
+         applies to Contracts and Customer Specific Prices (&quot;CT&quot; and &quot;PR&quot;) Only
+<b>S        </b>A rate with this element indicating an &quot;S&quot; value will be applied to the 
+         exclusion of all other rates except those indicated as &quot;N&quot;
+</pre><!--mstheme--><font face="arial, Arial, Helvetica"></tt><!--mstheme--></font></body></html>

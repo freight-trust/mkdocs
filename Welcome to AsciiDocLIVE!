@@ -1,0 +1,185 @@
+Welcome to AsciiDocLIVE!
+------------------------
+
+AsciiDocLIVE is a *free online http://www.methods.co.nz/asciidoc/[AsciiDoc^]
+editor*.
+
+* Just type AsciiDoc source text into the *left* pane,
+* ...and the live preview appears in the *right* pane!
+
+What's AsciiDoc?
+~~~~~~~~~~~~~~~~~
+
+AsciiDoc is a human-readable text document format for writing notes,
+documentation, articles, books, ebooks, slideshows, web pages, man pages and
+blogs, and more. AsciiDoc files can be translated to many formats including
+HTML, PDF, EPUB, and man page.
+
+To learn more, visit the AsciiDoc home page at
+http://www.methods.co.nz/asciidoc/[^].
+
+About AsciiDocLIVE
+~~~~~~~~~~~~~~~~~~
+AsciiDocLIVE is currently in *beta* stage. This means there are likely a _lot_
+of bugs, and even more ways to make it better.
+
+If you have any questions, suggestions or other feedback, please
+feel free to
+https://github.com/jichu4n/asciidoclive/issues/new[create an issue on pass:[<i class="fa fa-github"></i>] GitHub^].
+Hope
+to hear from you soon!
+
+
+[[cheat-sheet]]
+AsciiDoc Mini Cheat Sheet
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To help you get started, here're some snippets from the
+http://powerman.name/doc/asciidoc[AsciiDoc Cheet Sheet^]. Feel free to poke
+around :)
+
+Text Styles
+^^^^^^^^^^^
+* normal, _italic_, *bold*, +mono+.
+* ``double quoted'', `single quoted'.
+* normal, ^super^, ~sub~.
+* `passthru *bold*`
+
+Tables
+^^^^^^
+.https://tools.ietf.org/html/rfc4130#section-7.3[source]
+[options="header"]
+|=======================
+|Algorithm|Value Used     
+|SHA1    |sha1 
+|MD5    |md5
+|=======================
+
+Lists
+^^^^^
+
+* Q: How did the programmer die in the shower?
+  A: He read the shampoo instructions:
+
+  . Lather, rinse.
+  . Repeat.
+
+* There are only 10 kinds of people in this world:
+  - Those who understand binary.
+  - Those who don't.
+
+Misc
+^^^^
+
+* Code listings:
++
+[source,python]
+-----------------
+#!/usr/bin/env python
+import antigravity
+try:
+  antigravity.fly()
+except FlytimeError as e:
+  # um...not sure what to do now.
+  pass
+-----------------
+
+AS2 Headers
+
+  `AS2-text` = "!" /           ; printable ASCII characters
+             %d35-91 /       ; except double-quote (%d34)
+             %d93-126        ; or backslash (%d92)
+
+  `AS2-qtext` = AS2-text / SP  ; allow space only in quoted text
+
+  `AS2-quoted-pair` = "\" DQUOTE /  ; \" or
+                    "\" "\"       ; \\
+
+  `AS2-quoted-name` = DQUOTE 1*128( AS2-qtext /
+                                  AS2-quoted-pair) DQUOTE
+
+  `AS2-atomic-name` = 1*128AS2-text
+
+  `AS2-name` = AS2-atomic-name / AS2-quoted-name
+
+## Requesting a Signed Receipt
+
+For signing options, consider the disposition-notification-options
+syntax:
+
+    Disposition-notification-options =
+             "Disposition-Notification-Options" ":"
+              disposition-notification-parameters
+
+where
+         disposition-notification-parameters =
+                           parameter *(";" parameter)
+
+where
+         parameter = attribute "=" importance ", " 1#value"
+
+where
+         importance = "required" | "optional"
+
+So the Disposition-notification-options string could be:
+
+    signed-receipt-protocol=optional,<protocol symbol>;
+    signed-receipt-micalg=optional,<micalg1>,<micalg2>,...;
+
+### MDN Request Header
+
+
+
+MDN-request-header = "Disposition-notification-to"
+                        ":"  mail-address
+
+The following example is for requesting an MDN:
+
+  `  Disposition-notification-to: xxx@example.com `
+
+### AS2 Name Calculation
+
+  `AS2-quoted-name` = DQUOTE 1*128( AS2-qtext /
+                                  AS2-quoted-pair) DQUOTE
+
+  `AS2-atomic-name` = 1*128AS2-text
+
+*  `AS2-name` = `AS2-atomic-name` / AS2-quoted-name
+
+### AS2 Async
+
+To request an asynchronous message disposition notification, the
+following header is placed into the message that is sent:
+
+*    `Receipt-Delivery-Option: return-URL`
+
+Here is an example requesting that the MDN be asynchronous:
+
+*    `Receipt-Delivery-Option: http://www.example.com/Path`
+
+The receipt-delivery-option's value MUST be a URL indicating the
+delivery transport destination for the receipt.
+
+An example request for an asynchronous MDN via an HTTP transport:
+
+*    `Receipt-delivery-option: http://www.example.com`
+
+An example request for an asynchronous MDN via an HTTP/S transport:
+
+*   `Receipt-delivery-option: https://www.example.com`
+
+An example request for an asynchronous MDN via an SMTP transport:
+
+*    ```Receipt-delivery-option: mailto:as2@example.com```
+
+## Circut
+
+The currently supported values for MIC algorithm <micalg> values are:
+
+.https://tools.ietf.org/html/rfc4130#section-7.3[source]
+[options="header"]
+|=======================
+|Algorithm|Value Used     
+|SHA1    |sha1 
+|MD5    |md5
+|=======================
